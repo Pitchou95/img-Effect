@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #555;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: #222;
+}
+
+.clip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.clip1 {
+    background: url(https://99designs-blog.imgix.net/blog/wp-content/uploads/2016/04/wwf.jpg?auto=format&q=60&fit=max&w=930);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 46% 0, 39% 100%, 0 100%);
+
+}
+
+.clip2 {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXq9ymgJ7pumOaaOXqwd2BqlLk9O2j4Q4-GA&usqp=CAU);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(19% 0, 87% 0, 64% 100%, 33% 100%);
+
+}
+
+.clip3 {
+    background: url(https://pixlr.com/images/index/ai-image-generator-three.webp);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(82% 0, 100% 0, 100% 100%, 63% 100%);
+}
+
+.container:hover .clip {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+.container .clip:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
